@@ -52,64 +52,14 @@ nav button:hover {
   margin-bottom: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
-
-/* 🔥 로그인 화면 중앙 정렬 */
-#login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* 로그인 박스 */
-.login-box {
-  width: 100%;
-  max-width: 420px;      /* 박스 자체도 더 큼 */
-  background: white;
-  padding: 35px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* 🔽 입력칸 크기 더 업 */
-.login-box input {
-  width: 100%;
-  padding: 18px;        /* 이전보다 더 큼 */
-  font-size: 17px;
-  margin-bottom: 18px;
-  border-radius: 10px;
-  border: 1px solid #cbd5f5;
-  box-sizing: border-box;
-}
-
-.login-box input:focus {
-  outline: none;
-  border-color: #2563eb;
-}
-
-/* 로그인 버튼 */
-.login-btn {
-  width: 100%;
-  padding: 16px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.login-btn:hover {
-  background: #1e40af;
-}
 </style>
 </head>
 
 <body>
 
+<!-- 🔹 로그인 버튼 제거된 네비게이션 -->
 <nav>
   <button onclick="showPage('main')">메인</button>
-  <button onclick="showPage('login')">로그인</button>
   <button onclick="showPage('chat')">자유 소통</button>
   <button onclick="showPage('book')">문제집 추천</button>
 </nav>
@@ -120,24 +70,23 @@ nav button:hover {
   <p>청소년 학습 소통 공간</p>
 
   <div class="card">
-    <h3>오늘의 공지</h3>
-    <p>열심히 공부하는 여러분을 응원합니다 💪</p>
+    <h3>환영합니다!</h3>
+    <p>
+      이곳은 공부 질문, 정보 공유, 문제집 추천을 자유롭게 나누는 공간입니다.
+    </p>
   </div>
-</div>
 
-<!-- 로그인 화면 -->
-<div id="login" class="page">
-  <div class="login-box">
-    <h2 style="text-align:center; margin-bottom:20px;">로그인</h2>
-    <input type="text" placeholder="아이디">
-    <input type="password" placeholder="비밀번호">
-    <button class="login-btn">로그인</button>
+  <div class="card">
+    <h3>이용 방법</h3>
+    <p>
+      상단 메뉴를 눌러 자유 소통 게시판이나 문제집 추천을 확인해보세요.
+    </p>
   </div>
 </div>
 
 <!-- 자유 소통 -->
 <div id="chat" class="page">
-  <h2>자유 소통 게시판</h2>
+  <h2>💬 자유 소통 게시판</h2>
 
   <div class="card">
     <h3>수학 질문 있어요</h3>
@@ -152,16 +101,16 @@ nav button:hover {
 
 <!-- 문제집 추천 -->
 <div id="book" class="page">
-  <h2>문제집 추천</h2>
+  <h2>📚 문제집 추천</h2>
 
   <div class="card">
     <h3>수학: RPM</h3>
-    <p>기본기 다지기에 좋아요.</p>
+    <p>기본 개념 + 문제 연습용으로 좋아요.</p>
   </div>
 
   <div class="card">
     <h3>영어: 자이스토리</h3>
-    <p>모의고사 대비에 좋습니다.</p>
+    <p>기출 문제 정리하기에 좋습니다.</p>
   </div>
 </div>
 
