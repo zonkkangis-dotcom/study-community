@@ -53,22 +53,30 @@ nav button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* 로그인 박스 */
-.login-box {
-  max-width: 360px;
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+/* 🔥 로그인 화면 중앙 정렬 */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 🔽 입력칸 크기 업그레이드 */
+/* 로그인 박스 */
+.login-box {
+  width: 100%;
+  max-width: 420px;      /* 박스 자체도 더 큼 */
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 🔽 입력칸 크기 더 업 */
 .login-box input {
   width: 100%;
-  padding: 14px;          /* 높이 커짐 */
-  font-size: 16px;        /* 글자 커짐 */
-  margin-bottom: 14px;
-  border-radius: 8px;
+  padding: 18px;        /* 이전보다 더 큼 */
+  font-size: 17px;
+  margin-bottom: 18px;
+  border-radius: 10px;
   border: 1px solid #cbd5f5;
   box-sizing: border-box;
 }
@@ -81,13 +89,13 @@ nav button:hover {
 /* 로그인 버튼 */
 .login-btn {
   width: 100%;
-  padding: 14px;
+  padding: 16px;
   background: #2563eb;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
 }
 
@@ -119,8 +127,8 @@ nav button:hover {
 
 <!-- 로그인 화면 -->
 <div id="login" class="page">
-  <h2>로그인</h2>
   <div class="login-box">
+    <h2 style="text-align:center; margin-bottom:20px;">로그인</h2>
     <input type="text" placeholder="아이디">
     <input type="password" placeholder="비밀번호">
     <button class="login-btn">로그인</button>
