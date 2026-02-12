@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Club</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f4f6fb;
+}
+
+/* 상단 네비게이션 */
+nav {
+  background: #1e40af;
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+nav button {
+  background: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover {
+  background: #e0e7ff;
+}
+
+/* 페이지 공통 */
+.page {
+  display: none;
+  padding: 40px;
+}
+
+.active {
+  display: block;
+}
+
+/* 카드 스타일 */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* 로그인 박스 */
+.login-box {
+  max-width: 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <button onclick="showPage('main')">메인</button>
+  <button onclick="showPage('login')">로그인</button>
+  <button onclick="showPage('chat')">자유 소통</button>
+  <button onclick="showPage('book')">문제집 추천</button>
+</nav>
+
+<!-- 메인 화면 -->
+<div id="main" class="page active">
+  <h1>📘 Study Club</h1>
+  <p>청소년 학습 소통 공간</p>
+
+  <div class="card">
+    <h3>오늘의 공지</h3>
+    <p>열심히 공부하는 여러분을 응원합니다 💪</p>
+  </div>
+</div>
+
+<!-- 로그인 화면 -->
+<div id="login" class="page">
+  <h2>로그인</h2>
+  <div class="login-box">
+    <input type="text" placeholder="아이디">
+    <input type="password" placeholder="비밀번호">
+    <button class="login-btn">로그인</button>
+  </div>
+</div>
+
+<!-- 자유 소통 -->
+<div id="chat" class="page">
+  <h2>자유 소통 게시판</h2>
+
+  <div class="card">
+    <h3>수학 질문 있어요</h3>
+    <p>이차함수 풀이 도와주세요!</p>
+  </div>
+
+  <div class="card">
+    <h3>시험기간 공부법 공유</h3>
+    <p>여러분은 어떻게 공부하시나요?</p>
+  </div>
+</div>
+
+<!-- 문제집 추천 -->
+<div id="book" class="page">
+  <h2>문제집 추천</h2>
+
+  <div class="card">
+    <h3>수학: RPM</h3>
+    <p>기본기 다지기에 좋아요.</p>
+  </div>
+
+  <div class="card">
+    <h3>영어: 자이스토리</h3>
+    <p>모의고사 대비에 좋습니다.</p>
+  </div>
+</div>
+
+<script>
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => page.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
