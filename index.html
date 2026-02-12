@@ -23,10 +23,11 @@ nav {
 nav button {
   background: white;
   border: none;
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 15px;
 }
 
 nav button:hover {
@@ -54,27 +55,44 @@ nav button:hover {
 
 /* 로그인 박스 */
 .login-box {
-  max-width: 300px;
+  max-width: 360px;
   background: white;
-  padding: 25px;
-  border-radius: 12px;
+  padding: 30px;
+  border-radius: 14px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-input {
+/* 🔽 입력칸 크기 업그레이드 */
+.login-box input {
   width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 14px;          /* 높이 커짐 */
+  font-size: 16px;        /* 글자 커짐 */
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  box-sizing: border-box;
 }
 
+.login-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* 로그인 버튼 */
 .login-btn {
   width: 100%;
-  padding: 8px;
+  padding: 14px;
   background: #2563eb;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background: #1e40af;
 }
 </style>
 </head>
